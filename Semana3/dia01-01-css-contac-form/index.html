@@ -3,35 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
   <title>Document</title>
 </head>
 <body>
-  Contact Us
+  <h1>Contact Us</h1>
 
-  First Name
-  This field is required
+  <form action="">
+    <label for="">
+      First Name <span class="required">*</span>
+      <input type="text" name="first_name" id="">
+    </label>
+    
+    <label for="">
+      Last Name <span class="required">*</span>
+      <input type="text" name="Last_name" id="">
+    </label>
 
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
+    <label for=""> 
+      Email Address <span class="required">*</span>
+      <input type="text" name="Email" id="">
+    </label>
+  
+    <label for="">
+       Query Type <span class="required">*</span>
+      <input type="text" name="Query" id="">
+    </label>
+ 
   General Enquiry
   Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
+  
+    <label for="">
+      Message <span class="required">*</span>
+      <input type="text" name="Message" id="">
+    </label>
+  
+    <label for="">
+      <input type="checkbox">
+      I consent to being contacted by the tea
+    </label>
+  
+    <input type="submit" value="submit">
+         
+  </form>
 </body>
 </html>
