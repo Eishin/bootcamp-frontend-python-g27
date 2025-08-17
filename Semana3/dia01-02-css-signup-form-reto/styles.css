@@ -1,3 +1,97 @@
 body {
-  background-color: aquamarine;
-}
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: hsl(218, 28%, 13%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: hsl(0, 0%, 100%);
+      border-radius: 16px;
+      padding: 32px;
+      width: 900px;
+      display: flex;
+      gap: 1rem;
+      /*display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;*/
+    }
+
+    .card__content{
+      border: 1px solid red;
+    }
+
+    .card__content h1 {
+      margin: 0 0 12px;
+      font-size: 32px;
+      font-weight: 700;
+      color: #1d1d1d;
+    }
+
+    .card__content p {
+      margin: 0 0 20px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .card__list {
+      margin: 0 0 24px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .card__list-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .card__list-item::before {
+      content: "✔";
+      color: #ff5d5d;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .form__label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    .form__input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      margin-bottom: 16px;
+    }
+
+    .form__button {
+      width: 100%;
+      padding: 14px;
+      background: #1d2233;
+      border: none;
+      border-radius: 6px;
+      color: hsl(0, 0%, 100%);
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .form__button:hover {
+      background: #111522;
+    }
+
+    .card__visual img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }

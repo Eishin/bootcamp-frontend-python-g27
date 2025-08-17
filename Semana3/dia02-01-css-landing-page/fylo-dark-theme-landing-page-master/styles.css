@@ -100,3 +100,36 @@ a{
   background: linear-gradient(to bottom right,hsl(176, 68%, 64%), hsl(198, 60%, 50%))
 }
 
+.features{
+  border: 1px solid red;
+
+  display: grid;
+  grid-template-columns: 340px 340px;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.feature{
+  border: 1px solid red;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/*.features--img{
+  display: block;
+  width: 100%;
+  height: auto;
+}*/
+
+.feature--title{ 
+  font-family: "Raleway", sans-serif;
+}
+
+.feature--text{
+  text-align: center;
+}
+
