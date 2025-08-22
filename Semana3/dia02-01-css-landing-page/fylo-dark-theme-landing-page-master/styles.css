@@ -108,7 +108,7 @@ a{
 }
 
 .features{
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 
   display: grid;
   grid-template-columns: 340px;
@@ -118,7 +118,7 @@ a{
 }
 
 @media (min-width: 1200px){
-  .feature{
+  .features{
     grid-template-columns: 340px 340px;
   }
 
@@ -147,3 +147,139 @@ a{
   text-align: center;
 }
 
+.collaboration{
+  /*border: 1px solid red;*/
+  
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+@media (min-width: 1200px){
+  .collaboration{
+    flex-direction: row;
+  } 
+
+}
+
+.how_works{
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  width: min(100% - 5rem, 480px);
+}
+
+.how_works--title{
+  
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@media (min-width: 1200px){
+  .how_works--title{
+    font-size: 2.8rem;
+  }
+}
+
+.how_works--text{
+
+  /*font-family: "Open Sans", sans-serif;*/
+}
+
+.how_works--button{
+
+  color: hsl(176, 68%, 64%);
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  width: 10.9rem;
+  border-bottom: 1px solid hsl(176, 68%, 64%);
+  padding-bottom: 0.5rem;
+}
+
+.testimonials{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  margin: 0 auto;
+
+}
+
+@media (min-width: 1200px) {
+  .testimonials{
+    flex-direction: row;
+  }
+  
+}
+
+.testimonial{
+  
+  padding: 2rem 1.5rem;
+  background-color: hsl(219, 30%, 18%);
+  border-radius: .5rem;
+
+  width: min(100% - 3rem, 480px);
+
+  position: relative;
+}
+
+/* .testimonial:nth-child(2):before {} */
+/* .testimonial:first-child:before {} */
+/* .testimonial:last-child:after {} */
+
+.testimonial:first-child:before{
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  z-index: -1;
+
+  display: block;
+  width: 50px;
+  height: 45px;
+
+  background-image: url(images/bg-quotes.png);
+}
+
+.testimonial--text{
+
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.testimonial--profile{ 
+
+  display: flex;
+  gap: 1rem;
+
+  font-size: 1rem;
+}
+
+.testimonial img{
+  width: 40px;
+  height: 40px;
+}
+
+.testimonial--avatar{
+
+  border-radius: 10rem;
+}
+
+.testimonial--user{
+
+  font-weight: 700;
+}
