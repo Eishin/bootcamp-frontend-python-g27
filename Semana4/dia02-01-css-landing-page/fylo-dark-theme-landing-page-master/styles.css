@@ -117,9 +117,7 @@ a{
   gap: 5rem;
 }
 
-@media {
-  
-}
+@media ()
 
 .feature{
   border: 1px solid red;
