@@ -117,8 +117,11 @@ a{
   gap: 5rem;
 }
 
-@media {
-  
+@media (min-width: 1200px){
+  .feature{
+    grid-template-columns: 340px 340px;
+  }
+
 }
 
 .feature{
