@@ -13,11 +13,12 @@ body {
       border-radius: 16px;
       padding: 32px;
       width: 900px;
-      display: flex;
-      gap: 1rem;
-      /*display: grid;
+      /*display: flex;
+      gap: 1rem;*/
+      display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 32px;*/
+      gap: 2rem;
+      align-items: center;
     }
 
     .card__content{
