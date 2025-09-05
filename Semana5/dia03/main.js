@@ -326,38 +326,6 @@ if (edadPersona >= 18) {
 //    Pista: un numero primo es divisible por sí mismo y por 1
 // 5. Devolver un valor que se incremente de dos en dos y devuelva los menores a 10
 
-const idioma = 'Japones';
-
-if (idioma === 'español' )
-{
-    console.log('Hola')
-} else if (idioma === 'ingles')
-    {
-        console.log('Hello')
-    }
-else if (idioma === 'Japones' )
-    {
-        console.log ('Kamisaraki')
-    }
-
-
-let num = 9 ;
-
-if( num % 3 === 0 && num % 5 === 0){
-    console.log('Fizzbuzz')
-} else if(num % 3 === 0){
-    console.log('Fizz')
-} else if(num % 5 === 0){
-    console.log('Buzz')
-}
-
-num = 1;
-
-if(num % num === 1 && num % 1 === 0){
-    console.log()
-}
-
-
 // FUNCIONES (Son bloques de código que podemos reutilizar)
 
 // Declaración
@@ -541,7 +509,6 @@ console.log('frutas'.split(''))
 console.log('frutas'.split('').join(','))
 
 
-
 // EJERCICIOS
 
 // EJERCICIO: Lista de Invitados
@@ -603,3 +570,128 @@ let invitados = ["Ana", "Luis", "María", "Pedro", "Carla"];
 // TODO: Investiguen cada uno de los métodos de arreglos que muestro en la siguiente línea
 
 // MÉTODOS DE ARREGLOS (includes, map, filter, reduce, every, some, flat, flatMap, etc.)
+
+const languages = ['javascript', 'php', 'python', 'C', 'c++', 'java', 'python']
+
+// Método INCLUDES, verifica si existe cierto valor(tipo de dato) en un arreglo y devuelve un resultado booleano(true o false)
+
+console.log('INCLUDES', languages.includes('java')) // true
+console.log('INCLUDES', languages.includes('cobol')) // false
+console.log('INCLUDES', languages.includes('PYTHON')) // false
+
+// Método MAP, devuelve un arreglo y modifica cada elemento pasando una función(callback)
+// El map siempre devuelve un arreglo nuevo
+
+const nombresConAsterisco = languages.map(function(language) {
+  return language + '*'
+})
+
+console.log(languages) // Este arreglo no cambia
+
+console.log(nombresConAsterisco)
+
+// Método FILTER, nos ayuda a ubicar un elemento dentro de un arreglo usando una condición y devuelve un nuevo arreglo con los resultados
+
+const filteredLanguages = languages.filter(
+  function (language) {
+    // return false
+    // return language === 'java'
+    // return language === 'python'
+    // return language.includes('c')
+    return language.toLowerCase().includes('c')
+  }
+)
+
+console.log(filteredLanguages)
+console.log(languages)
+
+// EJERCICIO: Análisis de compras
+// Tienes un arreglo con los nombres de productos que un cliente compró en una tienda:
+
+const compras = [
+  "manzana",
+  "pan",
+  "leche",
+  "manzana",
+  "queso",
+  "huevo",
+  "pan",
+  "jugo",
+  "manzana"
+];
+
+// Resuelve lo siguiente:
+
+// includes: Verifica si el cliente compró "queso".
+console.log()
+// filter: Crea un nuevo arreglo que contenga solo las manzanas que se compraron.
+console.log()
+// reduce: Cuenta cuántos productos en total compró el cliente.
+console.log()
+
+// Método REDUCE, nos ayuda a tomar los valores de un arreglo y sumarlos
+
+const numeros = [3, 40, 100, 7, 50]
+
+let acumulador = 0
+
+for (let i=0; i < numeros.length; i++) {
+  acumulador = acumulador + numeros[i]
+}
+
+console.log(acumulador)
+
+// Vamos a usar reduce
+
+const sumatoria = numeros.reduce(
+  function(acumulador, valorActual) {
+    return acumulador + valorActual
+  },
+  0
+)
+
+console.log(sumatoria)
+
+// Método SORT y TOSORTED, nos ayuda a ordenar un arreglo de elementos.
+// ⚠ Muta el arreglo original. Ordena cadenas de texto.
+
+// [...languages]: esta sintaxis copia el arreglo original en un nuevo arreglo
+
+const copiaDeLanguages = [...languages]
+const ordenandoLanguages = copiaDeLanguages.sort()
+
+const ordenandoLanguagesMejorado = languages.toSorted()
+
+console.log(ordenandoLanguages)
+console.log(ordenandoLanguagesMejorado)
+console.log(languages)
+
+const edades = [25, 12, 10, 89, 32, 81, 3]
+
+const ordenandoEdadesAsc = [...edades].sort(function(a, b) {
+  // Si el resultado es negativo -> a va antes que b
+  // Si el resultado es positivo -> b va antes que a
+  // Si es 0 -> son iguales
+  return a - b
+})
+
+const ordenandoEdadesDesc = [...edades].sort(function(a, b) {
+  return b - a
+})
+
+console.log(ordenandoEdadesAsc)
+console.log(ordenandoEdadesDesc)
+
+// Método FOREACH, nos ayuda a recorrer un arreglo sin tener ningún retorno de datos
+
+const miArreglo = []
+
+languages.forEach(
+  function(language, index) {
+    if (index > 3) {
+      miArreglo.push('hola--' + language)
+    }
+  }
+)
+
+console.log(miArreglo)
