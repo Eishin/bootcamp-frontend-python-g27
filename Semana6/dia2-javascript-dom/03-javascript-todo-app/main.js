@@ -20,6 +20,9 @@ taskAdd.addEventListener('click', function(event) {
   const li = document.createElement('li')
 
   // TODO: 01 Añadir un checkbox al li
+  const checkbox = document.createElement('input')
+  checkbox.setAttribute('type', 'checkbox')
+  li.appendChild(checkbox) // Añadiendo el checkbox dentro del li
 
   // DONE: 02 Añadir el elemento span al elemento li
   const span = document.createElement('span')
@@ -33,8 +36,28 @@ taskAdd.addEventListener('click', function(event) {
 
   taskList.appendChild(li)
 
-  // TODO: 02 Limpiar la caja de texto después de crear la tarea
+  // taskList.innerHTML = `<li>
+  //   <input type="checkbox" />
+  //   <span>Tarea 1</span>
+  //   <button>Borrar</button>
+  // </li>`
 
+  // TODO: 02 Limpiar la caja de texto después de crear la tarea
+  taskInput.value = ''
 })
 
 // TODO: 03 permitir al botón borrar remover una tarea de la lista
+taskList.addEventListener('click', function(event) {
+  // console.log('Hice click en cualquier parte de la lista ul')
+
+  const target = event.target // Elemento presionado
+
+  // console.log({ target })
+
+  if (target.tagName === 'BUTTON') {
+    console.log('Eliminando tarea...')
+  }
+  // } else {
+  //   console.log('Presionaste otra etiqueta')
+  // }
+})
