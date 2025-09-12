@@ -55,7 +55,14 @@ taskList.addEventListener('click', function(event) {
   // console.log({ target })
 
   if (target.tagName === 'BUTTON') {
-    console.log('Eliminando tarea...')
+    console.log('Eliminando tarea...', { el: target.parentElement })
+
+    target.parentElement.remove()
+  }
+
+  if(target.tagName === 'INPUT' && target.type === 'checkbox') {
+    console.log('Completando tarea...')
+    target.classList.toggle('checked')
   }
   // } else {
   //   console.log('Presionaste otra etiqueta')
