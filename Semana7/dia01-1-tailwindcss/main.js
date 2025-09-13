@@ -123,20 +123,11 @@ taskList.addEventListener('click', (event) => {
     console.log(tasks)
   }
 })
-  
-renderTasks(tasks)
 
+taskButtonClear.addEventListener('click',() =>{
+    const incompletetasks = tasks.filter(task => !task.completed)
+    tasks = incompletetasks
+    renderTasks(tasks)
+}) 
 
-    /*checkbox.forEach(cb=> {
-      cb.addEventListener('change', () => {
-        if(taskInput.checked) {
-          label.style.textDecoration = 'line-through'
-          label.style.color = 'gray'
-        } else {
-          label.style.textDecoration = 'none'
-          label.style.color = 'black'
-        }
-      })
-    })
-  }}*/
-
+renderTasks(tasks)  
