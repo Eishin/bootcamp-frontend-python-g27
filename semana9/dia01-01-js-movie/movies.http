@@ -1,0 +1,40 @@
+### Listar todas las películas
+GET http://localhost:3000/movies
+
+### Obtener una películas
+GET http://localhost:3000/movies/9
+
+### Create una película
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "name": "Spiderman",
+  "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+  "release": "2025-09-25",
+  "genreId": 1,
+  "summary": "resumen de prueba"
+}
+
+### Borrar una película
+DELETE http://localhost:3000/movies/1
+
+### Actualizar una película
+PUT http://localhost:3000/movies/11
+Content-Type: application/json
+
+{
+  "name": "Spiderman-modificado",
+  "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+  "release": "2025-09-25",
+  "genreId": 1,
+  "summary": "resumen de prueba-modificado"
+}
+
+### Actualizar una película
+PATCH http://localhost:3000/movies/11
+Content-Type: application/json
+
+{
+  "name": "Spiderman-modificado-5566"
+}
